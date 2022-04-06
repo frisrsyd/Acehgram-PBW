@@ -1,0 +1,71 @@
+#fitur_bg{
+    border-radius: 0.5em;
+}
+body{
+    background-color: #F7C050;
+    font-family: 'montserrat', sans-serif;
+}
+/* card post */
+.card-post {
+    margin-bottom: 2em;
+    border-radius: 0.8em;
+    background-color: #FFE9CB;
+    }
+.card-post .card-body {
+    padding: 0 1em 1em;
+    }
+.card-post .card-img-top {
+    padding: 0.8em;
+    }
+.card-post .profile img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+.card-post .profile{
+    color: black;
+}
+.post-caption{
+    color: black;
+}
+.card-post .profile a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* login & register */
+.auth-container,
+.auth-container .row {
+    height: 100vh;
+}
+.auth-container .row {
+    align-items: center;
+    justify-content: center;
+}
+.auth-container .login {
+    padding: 2em;
+    background-color: transparent;
+    border-radius: 16px;
+}
+.login img {
+    display: block;
+    margin: auto;
+    width: 40%;
+    border-radius: 1.83em;
+}
+.login{
+    color: gainsboro;
+}
+#btnSignIn{
+    color : #FFEFD9;
+}
+.forgotSignUp a{
+    color: #018F8C;
+    font-weight: bold;
+}
+.forgotSignUp span{
+    color: #9A9A9A;
+    font-weight: bold;
+}
