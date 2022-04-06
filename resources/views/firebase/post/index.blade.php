@@ -4,7 +4,7 @@
 
 
 @section('content')
-    {{-- <div class="container">
+    <div class="container">
         <div class="card card-post shadow">
             <img src="img/black-panther.jpg" class="card-img-top">
             <div class="card-body">
@@ -16,6 +16,6 @@
                 <small class="card-text post-caption ms-4">Example text caption</small>
             </div>
         </div>
-    </div> --}}
+    </div>
 
 @endsection
