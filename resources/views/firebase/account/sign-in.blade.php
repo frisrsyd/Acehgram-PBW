@@ -7,7 +7,7 @@
             <a href="{{url('home')}}"><img class="mb-4" src="img/logo.png"></a>
             <form>
                 <div class="mb-3">
-                    <input name="email" type="email" class="form-control" placeholder="Username/Email">
+                    <input name="email" type="text" class="form-control" placeholder="Username/Email">
                 </div>
                 <div class="mb-3">
                     <input name="password" type="password" class="form-control" placeholder="Password">
