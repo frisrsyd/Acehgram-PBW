@@ -6,12 +6,18 @@
         <div class="col-md-4 login">
             <h6 class="my-2"><b>Nama</b></h6>
             <form>
-                <div class="mb-3">
-                    <input name="name" type="text" class="form-control" placeholder="Depan">
-                </div>
-                <div class="mb-3">
-                    <input name="name" type="text" class="form-control" placeholder="Belakang">
-                </div>
+                <table>
+                    <td>
+                        <div class="mb-3">
+                            <input name="name" type="text" class="form-control pe-1" placeholder="Depan">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="mb-3">
+                            <input name="name" type="text" class="form-control" placeholder="Belakang">
+                        </div>
+                    </td>
+                </table>
                 <div class="mb-3">
                     <input name="email" type="email" class="form-control" placeholder="Alamat Email">
                 </div>
