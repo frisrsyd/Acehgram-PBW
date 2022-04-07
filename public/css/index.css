@@ -56,7 +56,7 @@ body{
 }
 .signUp .row {
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
 .signUp .login {
@@ -74,8 +74,9 @@ body{
 .login{
     color: #FFEFD9;
 }
-#btnSignIn{
+.btnSignIn{
     color : #FFEFD9;
+    background-color: #FF7E36;
 }
 .forgotSignUp a{
     color: #018F8C;
@@ -91,4 +92,7 @@ body{
     border: none;
     color: #B6B6B6;
     font-weight: lighter;
+}
+.keterangan{
+    color: #FFEFD9;
 }

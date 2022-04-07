@@ -3,35 +3,60 @@
 @section('content')
 <div class="container signUp">
     <div class="row">
-        <div class="col-md-4 login">
-            <h6 class="my-2"><b>Nama</b></h6>
+        <div class="col-md-12 login">
             <form>
-                <table>
-                    <td>
-                        <div class="mb-3">
-                            <input name="name" type="text" class="form-control pe-1" placeholder="Depan">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="mb-3">
+                <div class="mb-3">
+                    <table class="table table-borderless">
+                        <h6 class="mt-5 ms-2"><b>Nama</b></h6>
+                        <td>                            
+                            <input name="name" type="text" class="form-control" placeholder="Depan">                       
+                        </td>
+                        <td>
                             <input name="name" type="text" class="form-control" placeholder="Belakang">
-                        </div>
-                    </td>
-                </table>
-                <div class="mb-3">
-                    <input name="email" type="email" class="form-control" placeholder="Alamat Email">
+                        </td>
+                    </table>
                 </div>
                 <div class="mb-3">
-                    <input name="password" type="password" class="form-control" placeholder="Masukkan Password">
+                    <table class="table table-borderless">
+                        <td>                            
+                            <h6 class="keterangan"><b>Username</b></h6>
+                            <input name="username" type="text" class="form-control" placeholder="Username">                       
+                        </td>
+                        <td>
+                            <h6 class="keterangan"><b>Email</b></h6>
+                            <input name="email" type="email" class="form-control" placeholder="Alamat Email">
+                        </td>
+                    </table>
                 </div>
                 <div class="mb-3">
-                    <input name="password_confirm" type="password" class="form-control" placeholder="Ulangi Password">
+                    <table class="table table-borderless">
+                        <td>                
+                            <h6 class="keterangan"><b>Password</b></h6>            
+                            <input name="password" type="password" class="form-control" placeholder="Password">                       
+                        </td>
+                        <td>
+                            <h6 class="keterangan"><b>No. HP</b></h6>
+                            <input name="No-HP" type="number" class="form-control" placeholder="No. Hp">
+                        </td>
+                    </table>
                 </div>
-                <button class="btn btn-primary w-100 mb-4">DAFTAR</button>
+                <div class="mb-3">
+                    <table class="table table-borderless">
+                        <td>
+                            <h6 class="keterangan"><b>Confirm Password</b></h6>
+                            <input name="password_confirm" type="password" class="form-control" placeholder="Ulangi Password">
+                        </td>
+                        <td>
+                            <h6 class="keterangan"><b>Kota Asal</b></h6>
+                            <input name="kota_asal" type="text" class="form-control" placeholder="Kota Asal">
+                        </td>
+                    </table>
+                </div>
+                <div class="text-center">
+                    <span>Sudah punya akun? <a href="{{url('sign-in')}}">Masuk!</a></span>
+                </div>
+                <button class="btn btnSignIn mb-4 float-end" style="background-color: #FF7E36;">Create Account</button>
             </form>
-            <div class="text-center">
-                <span>Sudah punya akun? <a href="#">Masuk!</a></span>
-            </div>
         </div>
     </div>
 </div>
