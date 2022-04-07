@@ -44,11 +44,27 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .auth-container .login {
     padding: 2em;
     background-color: transparent;
     border-radius: 16px;
 }
+.signUp,
+.signUp .row {
+    height: 75vh;
+}
+.signUp .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp .login {
+    padding: 2em;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
 .login img {
     display: block;
     margin: auto;
@@ -56,10 +72,11 @@ body{
     border-radius: 1.83em;
 }
 .login{
-    color: gainsboro;
+    color: #FFEFD9;
 }
-#btnSignIn{
+.btnSignIn{
     color : #FFEFD9;
+    background-color: #FF7E36;
 }
 .forgotSignUp a{
     color: #018F8C;
@@ -68,4 +85,14 @@ body{
 .forgotSignUp span{
     color: #9A9A9A;
     font-weight: bold;
+}
+.form-control{
+    background-color: #FFEFD9;
+    border-radius: 0.5em;
+    border: none;
+    color: #B6B6B6;
+    font-weight: lighter;
+}
+.keterangan{
+    color: #FFEFD9;
 }
