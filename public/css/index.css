@@ -96,3 +96,29 @@ body{
 .keterangan{
     color: #FFEFD9;
 }
+/* Banner */
+.banner {
+    margin-top: 74.8px;
+    }
+.banner .name{
+    color: white;
+}
+.banner .cover-image,
+.banner .profile-image {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.banner .cover-image {
+    height: 350px;
+    background: salmon;
+    background-image: url(../img/cover.jpg);
+}
+.banner .profile-image {
+    width: 225px;
+    height: 225px;
+    background-image: url(../img/avatar.png);
+    border-radius: 50%;
+    border: 8px solid white;
+    margin: -115px auto 0 auto;
+}

@@ -26,4 +26,14 @@ class PostController extends Controller
     {
         return view('firebase.account.forgot-pass');
     }
+
+    public function createPost()
+    {
+        return view('firebase.post.create-post');
+    }
+
+    public function profile()
+    {
+        return view('firebase.post.profile');
+    }
 }
