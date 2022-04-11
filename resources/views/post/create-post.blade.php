@@ -8,7 +8,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <small style="color: #E9ECEF;" for="image">Upload gambar</small>
+                        <small for="image" class="keterangan">Upload gambar</small>
                         <input id="image" name="image" type="file" class="form-control mt-2" accept="image/*">
                     </div>
                     <div class="mb-3">
