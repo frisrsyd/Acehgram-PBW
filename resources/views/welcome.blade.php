@@ -1,4 +1,4 @@
-@extends('firebase.app')
+@extends('app')
 
 
 

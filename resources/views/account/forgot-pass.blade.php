@@ -1,4 +1,4 @@
-@extends('firebase.app')
+@extends('app')
 
 @section('content')
 <div class="container auth-container">
@@ -10,7 +10,7 @@
                     <input name="email" type="text" class="form-control" placeholder="Enter your Email">
                 </div>
                 <div class="text-center">
-                    <button class="btn  w-50 mb-4 btnSignIn">Forgot Password</button>
+                    <button class="btn  w-50 mb-4 btnSignIn shadow">Forgot Password</button>
                 </div>
             </form>
             <div class="mb-2 forgotSignUp text-center">

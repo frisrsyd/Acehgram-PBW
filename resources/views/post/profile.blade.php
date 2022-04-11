@@ -1,4 +1,4 @@
-@extends('firebase.app')
+@extends('app')
 @section('content')
     <div class="banner mb-3">
         <div class="cover-image shadow-sm"></div>

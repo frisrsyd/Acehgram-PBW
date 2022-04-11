@@ -1,4 +1,4 @@
-@extends('firebase.app')
+@extends('app')
 
 @section('content')
 <div class="container signUp">
@@ -82,7 +82,7 @@
                     <span>Sudah punya akun? <a href="{{url('sign-in')}}">Masuk!</a></span>
                 </div>
                 <div class="text-center">
-                    <button class="btn btnSignIn mb-4" style="background-color: #FF7E36;">Create Account</button>
+                    <button class="btn btnSignIn mb-4 shadow" style="background-color: #FF7E36;">Create Account</button>
 
                 </div>
             </form>
