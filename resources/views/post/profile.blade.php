@@ -12,161 +12,30 @@
     <!-- card post -->
     <div class="container">
         <div class="row">
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/dazai.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
+            @forelse ($post_image as $key => $item)
+                <div class="col-md-4 card card-post shadow">
+                    <img src="images/{{$item['image']}}" class="card-img-top">
+                    <div class="card-body">
+                        <p class="mb-2 profile">
+                            <img src="img/avatar.png">
+                            <a href="#"><b>fulan bin fulan</b></a>
+                            <small class="text-muted float-end">5 minutes ago</small>
+                        <div class="row">
+                            <small class="card-text post-caption">{{$item['caption']}}</small>
+                            <div class="post-nav mb-2 text-end">
+                                <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
+                                <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
+                            </div>
                         </div>
+                        </p>
                     </div>
-                    </p>
                 </div>
-            </div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/black-panther.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/black-panther.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="w-100 d-none d-md-block"></div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/predator.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/avenger.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/avenger.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="w-100 d-none d-md-block"></div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/predator.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/avenger.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 card card-post shadow">
-                <img src="img/avenger.jpg" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                        <img src="img/avatar.png">
-                        <a href="#"><b>fulan bin fulan</b></a>
-                        <small class="text-muted float-end">5 minutes ago</small>
-                    <div class="row">
-                        <small class="card-text post-caption">Example text caption</small>
-                        <div class="post-nav mb-2 text-end">
-                            <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
-                        </div>
-                    </div>
-                    </p>
-                </div>
-            </div>
+                @if ($loop->iteration % 3 == 0)    
+                    <div class="w-100 d-none d-md-block"></div>
+                @endif
+            @empty
+                
+            @endforelse
         </div>
     </div>
 @endsection
