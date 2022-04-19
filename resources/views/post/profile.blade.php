@@ -11,6 +11,9 @@
 
     <!-- card post -->
     <div class="container">
+        @if (session('status'))
+            <h4 class="alert alert-warning mb-2">{{session('status')}}</h4>            
+        @endif
         <div class="row">
             @forelse ($post_image as $key => $item)
                 <div class="col-md-4 card card-post shadow">
@@ -23,8 +26,8 @@
                         <div class="row">
                             <small class="card-text post-caption">{{$item['caption']}}</small>
                             <div class="post-nav mb-2 text-end">
-                                <a href="#" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
-                                <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
+                                <a href="{{ url('delete-post/'.$key) }}" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
+                                <a href="{{url('edit-post/'.$key)}}" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
                             </div>
                         </div>
                         </p>

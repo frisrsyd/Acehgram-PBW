@@ -61,9 +61,46 @@ class PostController extends Controller
 
         $postRef = $this->database->getReference('posts')->push($postData);
         if($postRef){
-            return redirect('home')->with('status', 'Account Created');
+            return redirect('home')->with('status', 'Post Created');
         }else{
-            return redirect('home')->with('status', 'Account Not Created');
+            return redirect('home')->with('status', 'Post Not Created');
+        }
+    }
+
+    public function editPost($id)
+    {   
+        $key = $id;
+        $editdata = $this->database->getReference('posts')->getChild($key)->getValue();
+        if($editdata){
+            return view('post.edit-post', compact('editdata', 'key'));
+        }else{
+            return redirect('profile')->with('status', 'Post Not Exist');
+        }
+    }
+
+    public function updatePost(Request $request, $id)
+    {   
+        $key = $id;
+        
+        $updateData = [
+            'caption' => $request->caption,
+        ];
+        $updateRef = $this->database->getReference('posts'.'/'.$key)->update($updateData);
+
+        if($updateRef){
+            return redirect('profile')->with('status', 'Post Updated');
+        }else{
+            return redirect('profile')->with('status', 'Post Not Updated');
+        }
+    }
+    public function deletePost($id)
+    {   
+        $key = $id;
+        $deleteRef = $this->database->getReference('posts'.'/'.$key)->remove();
+        if($deleteRef){
+            return redirect('profile')->with('status', 'Post Deleted');
+        }else{
+            return redirect('profile')->with('status', 'Post Not Deleted');
         }
     }
 }
