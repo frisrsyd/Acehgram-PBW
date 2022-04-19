@@ -13,8 +13,9 @@ class PostController extends Controller
         $this->database = $database;
     }
     public function index()
-    {
-        return view('post.index');
+    {   
+        $post_image = $this->database->getReference('posts')->getValue();
+        return view('post.index', compact('post_image'));
     }
 
     public function signIn()
@@ -38,8 +39,9 @@ class PostController extends Controller
     }
 
     public function profile()
-    {
-        return view('post.profile');
+    {   
+        $post_image = $this->database->getReference('posts')->getValue();
+        return view('post.profile', compact('post_image'));
     }
 
     public function store(Request $request)
