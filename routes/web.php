@@ -13,3 +13,5 @@ Route::get('/sign-up', [PostController::class, 'signUp']);
 Route::get('/forgotPass', [PostController::class, 'forgot']);
 Route::get('/createpost', [PostController::class, 'createPost']);
 Route::get('/profile', [PostController::class, 'profile']);
+
+Route::post('createpost', [PostController::class, 'store']);

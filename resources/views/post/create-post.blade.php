@@ -4,7 +4,7 @@
     <div class="container mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <form enctype="multipart/form-data">
+                <form enctype="multipart/form-data" method="POST" action="{{url('createpost')}}">
                     @csrf
 
                     <div class="mb-3">
