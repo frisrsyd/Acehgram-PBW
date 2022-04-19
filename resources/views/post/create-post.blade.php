@@ -4,9 +4,8 @@
     <div class="container mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <form enctype="multipart/form-data" action="{{url('home')}}" method="POST">
-                    {{csrf_field()}}
-
+                <form enctype="multipart/form-data" method="POST" action="{{url('createpost')}}">
+                    @csrf
                     <div class="mb-3">
                         <small for="image" class="keterangan">Upload gambar</small>
                         <input id="image" name="image" type="file" class="form-control mt-2" accept="image/*">
