@@ -1,6 +1,6 @@
 ## Installation
 
-This package requires Laravel 8.x and higher or Lumen 8.x and higher.
+This package requires Laravel 8.x and higher.
 
 ```bash
 composer install
