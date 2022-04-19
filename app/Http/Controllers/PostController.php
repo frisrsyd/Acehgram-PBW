@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Kreait\Firebase\Contract\Database;
+use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {   
@@ -96,6 +97,10 @@ class PostController extends Controller
     public function deletePost($id)
     {   
         $key = $id;
+        $path = 'images/' . $this->database->getReference('posts')->getChild($key)->getValue()['image'];
+        if(File::exists($path)){
+            File::delete($path);
+        }
         $deleteRef = $this->database->getReference('posts'.'/'.$key)->remove();
         if($deleteRef){
             return redirect('profile')->with('status', 'Post Deleted');

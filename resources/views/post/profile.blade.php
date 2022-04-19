@@ -26,7 +26,7 @@
                         <div class="row">
                             <small class="card-text post-caption">{{$item['caption']}}</small>
                             <div class="post-nav mb-2 text-end">
-                                <a href="{{ url('delete-post/'.$key) }}" class="btn btn-outline-danger"><i class="bi bi-trash"></i> Hapus</a>
+                                <a href="{{ url('delete-post/'.$key) }}" class="btn btn-outline-danger" onclick="return confirm('Are you sure want to delete this photo?')"><i class="bi bi-trash"></i> Hapus</a>
                                 <a href="{{url('edit-post/'.$key)}}" class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i> Edit</a>
                             </div>
                         </div>
