@@ -14,7 +14,7 @@
 
     <body>
         
-        @include('firebase.inc.navbar')
+        @include('inc.navbar')
         <div class="py-3">
             @yield('content')
         </div>

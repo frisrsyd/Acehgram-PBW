@@ -1,18 +1,19 @@
-@extends('firebase.app')
+@extends('app')
 
 @section('content')
 <div class="container signUp">
     <div class="row">
         <div class="col-md-6 login">   
             <form>
+                
                 <div class="mb-3">
                     <table class="table table-borderless">
                         <h6 class="mt-5 ms-2"><b>Nama</b></h6>
                         <td>                            
-                            <input name="name" type="text" class="form-control" placeholder="Depan">                       
+                            <input name="name_depan" type="text" class="form-control" placeholder="Depan">                       
                         </td>
                         <td>
-                            <input name="name" type="text" class="form-control" placeholder="Belakang">
+                            <input name="name_belakang" type="text" class="form-control" placeholder="Belakang">
                         </td>
                     </table>
                 </div>
@@ -36,7 +37,7 @@
                         </td>
                         <td>
                             <h6 class="keterangan"><b>No. HP</b></h6>
-                            <input name="no-hp" type="text" class="form-control" placeholder="No. Hp">
+                            <input name="phone" type="text" class="form-control" placeholder="No. Hp">
                         </td>
                     </table>
                 </div>
@@ -82,7 +83,7 @@
                     <span>Sudah punya akun? <a href="{{url('sign-in')}}">Masuk!</a></span>
                 </div>
                 <div class="text-center">
-                    <button class="btn btnSignIn mb-4" style="background-color: #FF7E36;">Create Account</button>
+                    <button class="btn btnSignIn mb-4 shadow" style="background-color: #FF7E36;">Create Account</button>
 
                 </div>
             </form>

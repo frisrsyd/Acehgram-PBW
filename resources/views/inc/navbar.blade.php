@@ -7,7 +7,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto " style="background-color: #E9ECEF;" id="fitur_bg">
+        <div class="navbar-nav ms-auto shadow" style="background-color: #E9ECEF;" id="fitur_bg">
             <div class="navbar-nav m-auto" id="fitur">
                 <a class="btn btn-grey " href="{{url('home')}}"><i class="bi bi-house-door-fill me-1" style="color: black"></i>Home</a>
                 <a class="btn bg-gradient-primary" href="{{url('sign-in')}}"><i class="bi bi-box-arrow-in-left me-1"></i>Sign In</a>
