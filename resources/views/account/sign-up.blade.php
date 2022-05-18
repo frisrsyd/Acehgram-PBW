@@ -1,11 +1,11 @@
 @extends('app')
 
 @section('content')
-    <div class="container signUp">
-        <div class="bannerTop">
-            @if (session('status'))
-                <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
-            @endif
+    <div class="bannerTop">
+        @if (session('status'))
+            <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
+        @endif
+        <div class="container signUp">
             <div class="row">
                 <div class="col-md-6 login">
                     <form action="/sign-up" method="POST">
@@ -57,29 +57,29 @@
                                     <h6 class="keterangan"><b>Kota Asal</b></h6>
                                     <select id="city" name="kota_asal" class="form-select form-control">
                                         <option selected>Choose a City</option>
-                                        <option value="acehbarat">Aceh Barat</option>
-                                        <option value="abdya">Aceh Barat Daya</option>
-                                        <option value="acehbesar">Aceh Besar</option>
-                                        <option value="acehjaya">Aceh Jaya</option>
-                                        <option value="acehselatan">Aceh Selatan</option>
-                                        <option value="acehsingkil">Aceh Singkil</option>
-                                        <option value="acehtamiang">Aceh Tamiang</option>
-                                        <option value="acehtengah">Aceh Tengah</option>
-                                        <option value="acehtenggara">Aceh Tenggara</option>
-                                        <option value="acehtimur">Aceh Timur</option>
-                                        <option value="acehutara">Aceh Utara</option>
-                                        <option value="benermeriah">Bener Meriah</option>
-                                        <option value="bireun">Bireuen</option>
-                                        <option value="gayolues">Gayo Lues</option>
-                                        <option value="naganraya">Nagan Raya</option>
-                                        <option value="pidie">Pidie</option>
-                                        <option value="pidiejaya">Pidie Jaya</option>
-                                        <option value="simeulue">Simeulue</option>
-                                        <option value="bandaaceh">Banda Aceh</option>
-                                        <option value="langsa">Langsa</option>
-                                        <option value="lhokseumawe">Lhokseumawe</option>
-                                        <option value="sabang">Sabang</option>
-                                        <option value="subulussalam">Subulussalam</option>
+                                        <option value="Aceh Barat">Aceh Barat</option>
+                                        <option value="Abdya">Aceh Barat Daya</option>
+                                        <option value="Aceh Besar">Aceh Besar</option>
+                                        <option value="Aceh Jaya">Aceh Jaya</option>
+                                        <option value="Aceh Selatan">Aceh Selatan</option>
+                                        <option value="Aceh Singkil">Aceh Singkil</option>
+                                        <option value="Aceh Tamiang">Aceh Tamiang</option>
+                                        <option value="Aceh Tengah">Aceh Tengah</option>
+                                        <option value="Aceh Tenggara">Aceh Tenggara</option>
+                                        <option value="Aceh Timur">Aceh Timur</option>
+                                        <option value="Aceh Utara">Aceh Utara</option>
+                                        <option value="Bener Beriah">Bener Meriah</option>
+                                        <option value="Bireun">Bireuen</option>
+                                        <option value="Gayo Lues">Gayo Lues</option>
+                                        <option value="Nagan Raya">Nagan Raya</option>
+                                        <option value="Pidie">Pidie</option>
+                                        <option value="Pidie Jaya">Pidie Jaya</option>
+                                        <option value="Simeulue">Simeulue</option>
+                                        <option value="Banda Aceh">Banda Aceh</option>
+                                        <option value="Langsa">Langsa</option>
+                                        <option value="Lhokseumawe">Lhokseumawe</option>
+                                        <option value="Sabang">Sabang</option>
+                                        <option value="Subulussalam">Subulussalam</option>
 
                                     </select>
                                 </td>

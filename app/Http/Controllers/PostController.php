@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use App\Models\Post;
+use App\Models\User;
 
 class PostController extends Controller
 {   
     public function index()
     {   
-        // $post_image;
-        return view('post.index');
+        $posts = Post::orderBy('updated_at', 'desc')->get();
+        return view('post.index', compact('posts'));
     }
 
     public function signIn()
@@ -36,7 +38,7 @@ class PostController extends Controller
 
     public function profile()
     {   
-        $post_image = $this->database->getReference('posts')->getValue();
+        $post_image = Post::where('user_id', auth()->user()->id)->get();
         return view('post.profile', compact('post_image'));
     }
 
@@ -51,11 +53,11 @@ class PostController extends Controller
         $postData = [
             'image' => $imageName,
             'caption' => $request->caption,
-            'user_id' => 1,
+            'user_id' => auth()->user()->id,
             'created_at' => $request->created_at,
         ];
 
-        $postRef = $this->database->getReference('posts')->push($postData);
+        $postRef = Post::create($postData);
         if($postRef){
             return redirect('home')->with('status', 'Post Created');
         }else{
@@ -63,25 +65,22 @@ class PostController extends Controller
         }
     }
 
-    public function editPost($id)
+    public function editPost(Post $post)
     {   
-        $key = $id;
-        $editdata = $this->database->getReference('posts')->getChild($key)->getValue();
-        if($editdata){
-            return view('post.edit-post', compact('editdata', 'key'));
+        $posts = Post::find($post->id);
+        if($posts){
+            return view('post.edit-post', compact('posts'));
         }else{
             return redirect('profile')->with('status', 'Post Not Exist');
         }
     }
 
-    public function updatePost(Request $request, $id)
-    {   
-        $key = $id;
-        
+    public function updatePost(Request $request, Post $post)
+    {         
         $updateData = [
             'caption' => $request->caption,
         ];
-        $updateRef = $this->database->getReference('posts'.'/'.$key)->update($updateData);
+        $updateRef = Post::where('id', $post->id)->update($updateData);
 
         if($updateRef){
             return redirect('profile')->with('status', 'Post Updated');
@@ -89,14 +88,13 @@ class PostController extends Controller
             return redirect('profile')->with('status', 'Post Not Updated');
         }
     }
-    public function deletePost($id)
+    public function deletePost(Post $post)
     {   
-        $key = $id;
-        $path = 'images/' . $this->database->getReference('posts')->getChild($key)->getValue()['image'];
+        $path = 'images/' . $post->image;
         if(File::exists($path)){
             File::delete($path);
         }
-        $deleteRef = $this->database->getReference('posts'.'/'.$key)->remove();
+        $deleteRef = Post::where('id', $post->id)->delete();
         if($deleteRef){
             return redirect('profile')->with('status', 'Post Deleted');
         }else{

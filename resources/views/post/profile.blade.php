@@ -4,8 +4,8 @@
         <div class="cover-image shadow-sm"></div>
         <div class="profile-image shadow"></div>
         <div class="profile-info text-center mt-2">
-            <h4 class="name fw-bold">Fulan bin Fulan</h4>
-            <span class="text-muted">fulan@gmail.com</span>
+            <h4 class="name fw-bold">{{ auth()->user()->name }}</h4>
+            <span class="text-muted">{{ auth()->user()->email }}</span>
         </div>
     </div>
 
@@ -15,13 +15,13 @@
             <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
         @endif
         <div class="row">
-            @forelse ($post_image as $key => $item)
+            @forelse ($post_image as $item)
                 <div class="col-md-4 card card-post shadow">
                     <div class="post-nav mb-1 text-center mt-3">
-                        <a href="{{ url('delete-post/' . $key) }}" class="btn btn-outline-danger"
+                        <a href="{{ url('delete-post/' . $item->id) }}" class="btn btn-outline-danger"
                             onclick="return confirm('Are you sure want to delete this photo?')"><i
                                 class="bi bi-trash"></i> Hapus</a>
-                        <a href="{{ url('edit-post/' . $key) }}" class="btn btn-outline-primary"><i
+                        <a href="{{ url('edit-post/' . $item->id) }}" class="btn btn-outline-primary"><i
                                 class="bi bi-pencil-fill"></i> Edit</a>
                     </div>
                     <img src="images/{{ $item['image'] }}" class="card-img-top">

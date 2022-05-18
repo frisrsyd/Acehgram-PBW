@@ -12,17 +12,21 @@
                 <div class="navbar-nav m-auto" id="fitur">
                     <a class="btn btn-grey " href="{{ url('home') }}"><i class="bi bi-house-door-fill me-1"
                             style="color: black"></i>Home</a>
-                    <a class="btn bg-gradient-primary" href="{{ url('sign-in') }}"><i
-                            class="bi bi-box-arrow-in-left me-1"></i>Sign In</a>
-                    <a href="{{ url('createpost') }}" class="btn me-3" style="color: black"><i
-                            class="bi bi-plus"></i> Create Post</a>
-                    <a href="{{ url('profile') }}" class="btn me-3" style="color: black"><i
-                            class="bi bi-person"></i> My Profile</a>
-                    <form action="/logout" method="POST" class="btn btn-grey me-2" style="color: black"><i
-                            class="bi bi-box-arrow-right me-1"></i>
-                        @csrf
-                        <button type="submit" class="logoutBtn btn-grey">Logout</button>
-                    </form>
+
+                    @auth
+                        <a href="{{ url('createpost') }}" class="btn me-3" style="color: black"><i
+                                class="bi bi-plus"></i> Create Post</a>
+                        <a href="{{ url('profile') }}" class="btn me-3" style="color: black"><i
+                                class="bi bi-person"></i> My Profile</a>
+                        <form action="/logout" method="POST" class="btn btn-grey me-2" style="color: black"><i
+                                class="bi bi-box-arrow-right me-1"></i>
+                            @csrf
+                            <button type="submit" class="logoutBtn btn-grey">Logout</button>
+                        </form>
+                    @else
+                        <a class="btn bg-gradient-primary" href="{{ url('sign-in') }}"><i
+                                class="bi bi-box-arrow-in-left me-1"></i>Sign In</a>
+                    @endauth
 
                 </div>
             </div>
