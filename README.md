@@ -1,5 +1,5 @@
 <br>
-<p align="center"><img src="public/img/brand-light.png" alt="Acehgram Logo" width="300"></p>
+<p align="center"><img src="public/img/brand-dark.png" alt="Acehgram Logo" width="300"></p>
 <br>
 
 ## About Acehgram
