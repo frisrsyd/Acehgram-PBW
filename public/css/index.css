@@ -126,3 +126,7 @@ body{
     background: transparent;
     border: none;
 }
+.detailTable{
+    justify-content: center;
+    /* align-items: center; */
+}

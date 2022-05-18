@@ -41,6 +41,11 @@ class PostController extends Controller
         $post_image = Post::where('user_id', auth()->user()->id)->get();
         return view('post.profile', compact('post_image'));
     }
+    
+    public function editProfile(User $user)
+    {
+        return view('post.edit-profile', compact('user'));
+    }
 
     public function store(Request $request)
     {   

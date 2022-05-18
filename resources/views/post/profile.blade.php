@@ -3,9 +3,46 @@
     <div class="banner mb-3">
         <div class="cover-image shadow-sm"></div>
         <div class="profile-image shadow"></div>
-        <div class="profile-info text-center mt-2">
-            <h4 class="name fw-bold">{{ auth()->user()->name }}</h4>
+        <div class="profile-info text-center mt-2 mb-2">
+            <h4 class="name fw-bold">{{ auth()->user()->username }}
+                <a href="{{ url('edit-profile/' . auth()->user()->id) }}"><small><i
+                            class="bi bi-pencil-fill"></small></i></a>
+            </h4>
             <span class="text-muted">{{ auth()->user()->email }}</span>
+        </div>
+        <div class="row detailTable">
+            <div class="col-md-3">
+                <details class="text-center">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h6 class=""><b>Nama</b></h6>
+                                </td>
+                                <td>
+                                    <h6 class="">{{ auth()->user()->name }}</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6 class=""><b>No. HP</b></h6>
+                                </td>
+                                <td>
+                                    {{ auth()->user()->phone }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6 class=""><b>Kota Asal</b></h6>
+                                </td>
+                                <td>
+                                    {{ auth()->user()->kota_asal }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
         </div>
     </div>
 

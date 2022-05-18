@@ -61,4 +61,30 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
         return redirect('/')->with('status', 'Berhasil Logout!');
     }
+
+    public function updateProfile(Request $request, User $user)
+    {
+        $nama = $request->name_depan . " " . $request->name_belakang;
+
+        $validatedData = request()->validate([
+            'name_depan' => 'required',
+            'name_belakang' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'kota_asal' => 'required',
+        ]);
+
+        $user->update([
+            'name' => $nama,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'kota_asal' => $request->kota_asal,
+        ]);
+
+        if($user) {
+            return redirect('/profile')->with('status', 'Profile Updated');
+        }else{
+            return redirect('/edit-profile')->with('status', 'Profile Not Updated');
+        }
+    }
 }
