@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('/home', [PostController::class, 'index']);
@@ -16,3 +19,6 @@ Route::get('/delete-post/{id}', [PostController::class, 'deletePost']);
 Route::put('/update-post/{id}', [PostController::class, 'updatePost']);
 
 Route::post('createpost', [PostController::class, 'store']);
+Route::post('sign-up', [RegisterController::class, 'store']);
+Route::post('sign-in', [LoginController::class, 'store']);
+Route::post('logout', [LoginController::class, 'logout']);

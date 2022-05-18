@@ -4,19 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Kreait\Firebase\Contract\Database;
 use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {   
-    public function __construct(Database $database)
-    {
-        $this->database = $database;
-    }
     public function index()
     {   
-        $post_image = $this->database->getReference('posts')->getValue();
-        return view('post.index', compact('post_image'));
+        // $post_image;
+        return view('post.index');
     }
 
     public function signIn()

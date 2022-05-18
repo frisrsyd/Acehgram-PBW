@@ -97,9 +97,9 @@ body{
     color: #FFEFD9;
 }
 /* Banner */
-/* .banner {
+.bannerTop {
     margin-top: 74.8px;
-    } */
+    }
 .banner .name{
     color: white;
 }
@@ -121,4 +121,8 @@ body{
     border-radius: 50%;
     border: 8px solid white;
     margin: -115px auto 0 auto;
+}
+.logoutBtn{
+    background: transparent;
+    border: none;
 }
