@@ -1,6 +1,7 @@
 <br>
 <p align="center"><img src="public/img/brand-light.png" alt="Acehgram Logo" width="300"></p>
 <br>
+
 ## About Acehgram
 <p>Acehgram is a web application that allows people to share their photo of their best moment in life with other people. And other people can see it</p>
 
