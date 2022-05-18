@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable = ['image', 'caption', 'user_id'];
+
+    protected $fillable = [
+        'image', 'caption', 'user_id',
+    ];
+
     public function user()
     {
-    return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     }
-    public function getImageAttribute($value)
-    {
-    return url("post_images/$value");
-}
 }
