@@ -19,9 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
-        'profile',
+        'phone',
+        'kota_asal',
     ];
 
     /**
@@ -46,10 +48,5 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class);
-    }
-    
-    public function getProfileAttribute($value)
-    {
-        return url("profile_images/$value");
     }
 }

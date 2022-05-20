@@ -4,7 +4,7 @@
     <div class="container mt-5 pt-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <form method="POST" action="{{url('update-post/'.$key)}}">
+                <form method="POST" action="{{ url('update-post/' . $posts->id) }}">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
